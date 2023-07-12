@@ -1,0 +1,51 @@
+---
+title: FRIENDZOO
+pageName: 404
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} - {{pageName}}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/rsc/style.css">
+
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="headerwrapper">
+      <a href="/">
+      <div class="header">
+        <h1 class="title">{{title}}</h1>
+      </div>
+      </a>
+      <div class="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Gallery</a></li>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Resources</a></li>
+          <li><a href="/sitemap">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mainwrapper">
+      {{content | safe }}
+    </div>
+
+    <p id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></p>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+---
+layout: default.njk
+pageName: Downloads
+---
+
+{% import "_macros.njk" as macros %}
+
+{% set rasterInfo %}
+**SPECIES**: Critter
+
+"Pompets are generally active and curious rasters, and are known for chasing their tails and running around. It’s recommended that you help any pompets under your care to exercise regularly, as they get listless easily."
+
+**BREED BASE**: Maine Coon
+
+**ACCOMODATIONS**:
+- Can wear all clothing
+- No limitations
+
+**VARIATIONS**:
+- 10 textures needed
+- 100 texture variations
+- 7 size variations
+- 148 thumbnail variations
+
+**FAVORITE FOODS**: Cheese and sweets
+{% endset %}
+
+{{ macros.rasterFile(_rasterName = "Pompet", _mainImgUrl="pompetbig.png", _thumbnailImgUrl="pompetthumb.png", _rasterInfo=rasterInfo) }}

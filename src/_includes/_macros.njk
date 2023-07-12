@@ -1,0 +1,29 @@
+{% macro rasterFile(_rasterName = "Raster Name", _mainImgUrl = "placeholder.png", _thumbnailImgUrl="placeholderthumb.png", _rasterInfo = "") %}
+	<article class="raster-file">
+		<aside class="rf-images">
+			<div class="rf-main-image">
+				<img src="/rsc/img/rasters/{{_mainImgUrl}}" alt="Main image for {{_rasterName}}">
+			</div>
+		</aside>
+		<div class="rf-right">
+			<header class="rf-title">
+				<h2>
+					{{_rasterName}}
+				</h2>
+			</header>
+			<main class="rf-info">
+				{{_rasterInfo | markdown | safe}}
+			</main>
+		</div>
+		<div class="rf-thumbnails">
+			<img src="/rsc/img/rasters/{{_thumbnailImgUrl}}" alt="Thumbnail images for {{_rasterName}}">
+		</div>
+		<footer class="rf-buttons">
+			<a href="" class="rf-download">
+				<div class="rf-button-inner">
+					Download
+				</div>
+			</a>
+		</footer>
+	</article>
+{% endmacro %}
