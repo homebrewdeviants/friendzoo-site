@@ -20,7 +20,30 @@ pageName: 404
 
 <body>
 
-  <div class="page">
+  <header id="site-header">
+    <a href="/">
+      <img src="/rsc/img/logo.png" alt="{{title}}">
+    </a>
+  </header>
+
+  <aside id="nav-links">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/guide">Guides</a></li>
+        <li><a href="/downloads">Downloads</a></li>
+        <li><a href="/adopt">Adoptions</a></li>
+        <li><a href="/links">Links</a></li>
+        <li><a href="/sitemap">Sitemap</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="container">
+    {{content | safe}}
+  </main>
+
+  {# <div class="page">
     <div class="headerwrapper">
       <a href="/">
       <div class="header">
@@ -44,7 +67,7 @@ pageName: 404
     </div>
 
     <p id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></p>
-  </div>
+  </div> #}
 
 </body>
 

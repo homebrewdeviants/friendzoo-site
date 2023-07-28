@@ -1,4 +1,4 @@
-{% macro rasterFile(_rasterName = "Raster Name", _mainImgUrl = "placeholder.png", _thumbnailImgUrl="placeholderthumb.png", _rasterInfo = "") %}
+{% macro rasterFile(_rasterName = "Raster Name", _mainImgUrl = "placeholder.png", _thumbnailImgUrl="", _rasterInfo = "") %}
 	<article class="raster-file">
 		<aside class="rf-images">
 			<div class="rf-main-image">
@@ -15,9 +15,11 @@
 				{{_rasterInfo | markdown | safe}}
 			</main>
 		</div>
-		<div class="rf-thumbnails">
-			<img src="/rsc/img/rasters/{{_thumbnailImgUrl}}" alt="Thumbnail images for {{_rasterName}}">
-		</div>
+		{% if _thumbnailImgUrl %}
+			<div class="rf-thumbnails">
+				<img src="/rsc/img/rasters/{{_thumbnailImgUrl}}" alt="Thumbnail images for {{_rasterName}}">
+			</div>
+		{% endif %}
 		<footer class="rf-buttons">
 			<a href="" class="rf-download">
 				<div class="rf-button-inner">
